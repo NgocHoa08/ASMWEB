@@ -1,0 +1,278 @@
+/* Trang bài tập */
+.assignment-section {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.assignment-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Sidebar bộ lọc */
+.filter-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 24px;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-title {
+    color: #003366;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e3eaf6;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 12px 8px 32px;
+    border: 1px solid #e3eaf6;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.search-box input:focus {
+    border-color: #0074D9;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.course-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.filter-item:hover {
+    background: #e3eaf6;
+    color: #0074D9;
+}
+
+.filter-item.active {
+    background: #0074D9;
+    color: #fff;
+}
+
+.filter-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Content bài tập */
+.assignment-content {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 24px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e3eaf6;
+}
+
+.content-title {
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.type-filter {
+    display: flex;
+    gap: 8px;
+}
+
+.type-btn {
+    padding: 8px 16px;
+    border: 1px solid #0074D9;
+    background: transparent;
+    color: #0074D9;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.type-btn:hover {
+    background: #e3eaf6;
+}
+
+.type-btn.active {
+    background: #0074D9;
+    color: #fff;
+}
+
+/* Danh sách bài tập */
+.assignment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.assignment-item {
+    border: 1px solid #e3eaf6;
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.assignment-item:hover {
+    box-shadow: 0 2px 8px rgba(0,116,217,0.1);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.assignment-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #003366;
+    margin: 0;
+}
+
+.assignment-type {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.assignment-type.assignment {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.assignment-type.quiz {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.assignment-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.assignment-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.assignment-desc {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.assignment-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background: #0074D9;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #003366;
+}
+
+.btn-secondary {
+    background: #e3eaf6;
+    color: #0074D9;
+}
+
+.btn-secondary:hover {
+    background: #b3c7e6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .assignment-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .filter-sidebar {
+        position: static;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .assignment-section {
+        padding: 0 12px;
+    }
+    
+    .assignment-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .assignment-actions {
+        flex-direction: column;
+    }
+} 

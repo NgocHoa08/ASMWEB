@@ -1,0 +1,84 @@
+/* Grid hiển thị các card khóa học */
+.courses-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.course-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 24px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+.course-card:hover {
+    box-shadow: 0 4px 16px rgba(0,116,217,0.12);
+}
+.course-card .course-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 8px;
+}
+.course-card .course-desc {
+    font-size: 0.98rem;
+    color: #444;
+    margin-bottom: 16px;
+}
+.course-card .course-meta {
+    font-size: 0.92rem;
+    color: #0074D9;
+    margin-top: auto;
+}
+.course-card .course-code {
+    font-size: 0.98rem;
+    color: #0074D9;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.course-view-btn {
+    margin-top: 14px;
+    padding: 8px 20px;
+    background: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-end;
+}
+.course-view-btn:hover {
+    background: #003366;
+}
+.course-img {
+    width: 100%;
+    max-width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 900px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+} 
